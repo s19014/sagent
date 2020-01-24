@@ -6,7 +6,7 @@ const getJSON = async uri => {
   const item = await sagent
     .get(URI)
     .then(res => res.body)
-    .then(json => json.fruits)
+    .then(json => json.fruits[0].name)
   console.log(item)
 }
 
