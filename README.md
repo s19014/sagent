@@ -1,8 +1,4 @@
 # sagent
 
-### ブランチ
-- master
-    - 1/23授業
-    - public/fruits.jsonを表示する
-
-- class0124
+- p198
+    - 教科書P198
