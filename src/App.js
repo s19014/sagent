@@ -1,5 +1,5 @@
 import React from 'react'
-import TextForm from './TextForm'
+import CBoxForm from './CBoxForm'
 
 class App extends React.Component {
   constructor (props) {
@@ -11,7 +11,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <TextForm />
+        <CBoxForm />
       </div>
     )
   }
