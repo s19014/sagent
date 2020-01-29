@@ -1,40 +1,35 @@
 import React from 'react'
 
-class RadioForm extends React.Component {
+class SelectForm extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       items: props.items,
-      value: ''
+      value: props.value
     }
   }
 
   render () {
-    const radiolist = this.state.items.map(i => {
+    const options = this.state.items.map(i => {
       return (
-        <div key={i}>
-          <label>
-            <input
-              type='radio'
-              name='items'
-              value={i}
-              checked={this.state.value === i}
-              onChange={e => this.doChange(e)}
-            />
-            {i}
-          </label>
-        </div>
+        <option key={i} value={i}>
+          {i}
+        </option>
       )
     })
     return (
       <div>
         <form onSubmit={e => this.doSubmit(e)}>
-          {radiolist}
+          <select value={this.state.value} onChange={e => this.doChange(e)}>
+            {options}
+          </select>
+          <br />
           <input type='submit' />
         </form>
       </div>
     )
   }
+
   doChange (e) {
     this.setState({ value: e.target.value })
   }
@@ -45,4 +40,4 @@ class RadioForm extends React.Component {
   }
 }
 
-export default RadioForm
+export default SelectForm
