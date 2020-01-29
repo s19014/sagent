@@ -1,5 +1,5 @@
 import React from 'react'
-import TextAreaForm from './TextAreaForm'
+import RadioForm from './RadioForm'
 
 class App extends React.Component {
   constructor (props) {
@@ -11,7 +11,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <TextAreaForm />
+        <RadioForm items={['チョコ', '梅干し', 'ラムネ']}/>
       </div>
     )
   }
